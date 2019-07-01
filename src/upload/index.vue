@@ -9,8 +9,12 @@
         img="CertificatesImgFront"
       >
         <img :src="formInline.CertificatesImgFront" alt>
-        <i class="el-icon-camera"></i>
-        <UploadBtn>上传身份证人像面</UploadBtn>
+        <div class="upload-container">
+          <p>
+            <i class="el-icon-camera"></i>
+          </p>
+          <UploadBtn>上传身份证人像面</UploadBtn>
+        </div>
       </UploadFiles>
     </div>
     <div>
@@ -21,8 +25,12 @@
         @uploadCertificatesBack="uploadCertificatesBack"
       >
         <img :src="formInline.CertificatesImgBack" alt>
-        <i class="el-icon-camera"></i>
-        <UploadBtn>上传身份证人像面</UploadBtn>
+        <div class="upload-container">
+          <p>
+            <i class="el-icon-camera"></i>
+          </p>
+          <UploadBtn>上传身份证人像面</UploadBtn>
+        </div>
       </UploadFiles>
     </div>
   </div>
@@ -76,15 +84,22 @@ h3 {
     top: 0;
     width: 100%;
   }
-  i {
-    font-size: 40px;
-    display: block;
-    /* margin: 0 auto; */
-    text-align: center;
+  p {
+    width: 60px;
+    height: 60px;
+    background: #ccc;
     position: absolute;
     top: 40%;
     left: 50%;
     margin-left: -20px;
+    border-radius: 50%;
+    padding-top: 10px;
+    i {
+      font-size: 40px;
+      display: block;
+      text-align: center;
+      color: #fff;
+    }
   }
   .btn-group {
     font-size: 20px;
